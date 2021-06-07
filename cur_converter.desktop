@@ -1,0 +1,12 @@
+[Desktop Entry]
+Categories=Utility;
+Comment=Currency convertor via x-rates.com (TkInter)
+Encoding=UTF-8
+Exec=/usr/local/share/Currency-converter/cur_converter.py
+GenericName=cur_converter
+Icon= /usr/local/share/Currency-converter/icon.ico
+MimeType=
+Name=Currency Converter
+StartupNotify=true
+Terminal=false
+Type=Application
