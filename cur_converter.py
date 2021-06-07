@@ -58,6 +58,12 @@ class MainApplication(tk.Frame):
         self.textbox_output.insert(tk.END, number)
         self.textbox_output.config(state=tk.DISABLED)
 
+    # switch the converted currencies
+    def switch(self):
+        tmp = self.to_box.current()
+        self.to_box.current(self.from_box.current())
+        self.from_box.current(tmp)
+
     # delete characters that are not numbers from 'amount' text box
     def print_num(self):
         point = False
@@ -151,6 +157,7 @@ class MainApplication(tk.Frame):
         self.to_box.current(0)
 
         self.Button_convert = tk.Button(self.window, text="Convert", command=self.convert)
+        self.Button_switch = tk.Button(self.window, text="Switch", command=self.switch)
 
 
         self.amount_lable.grid(row=0, column=1, sticky=tk.W)
@@ -166,6 +173,7 @@ class MainApplication(tk.Frame):
         self.textbox_output.grid(row=7, column=1, sticky=tk.EW)
 
         self.Button_convert.grid(row=8, column=1, sticky=tk.N)
+        self.Button_switch.grid(row=4, column=1, sticky=tk.N)
         self.window.columnconfigure(0, weight=1)
         self.window.columnconfigure(1, weight=5)
         self.window.columnconfigure(2, weight=1)
