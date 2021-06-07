@@ -156,7 +156,7 @@ class MainApplication(tk.Frame):
         self.from_box.current(0)
         self.to_box.current(0)
 
-        self.Button_convert = tk.Button(self.window, text="Convert", command=self.convert, font=self.font)
+        self.Button_convert = tk.Button(self.window, text="Convert", height=2, width=25, command=self.convert, font=self.font)
         self.Button_switch = tk.Button(self.window, text="Switch", command=self.switch, font=self.font)
 
 
